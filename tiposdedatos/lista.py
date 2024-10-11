@@ -1,0 +1,16 @@
+# lista=[1,2,3,4,5,6,7,8,9]
+# print(lista)
+# elemento= input("ingrese el valor a agregar")
+# lista.append(int(elemento))
+# lista.remove(2)
+# print(lista)
+# lista.extend([5,7,7])
+# print(lista)
+# lista.insert(7,"nuevo")
+# print(lista)
+# elemento=lista.pop()
+# print(elemento)
+# print(lista)
+lista=["j","a",3,9,4,8,7,2,0]
+lista.sort(reverse=True)
+print(lista)

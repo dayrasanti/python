@@ -1,0 +1,6 @@
+texto = input("ingresa una cadena de texto")
+print("el texto egresado es")
+print(texto.upper())
+mayuscula= texto.lower()
+print(mayuscula)
+print (mayuscula.strip())
