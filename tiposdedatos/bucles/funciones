@@ -1,0 +1,15 @@
+cantidad = int(input("ingrese la cantidad de producto"))
+valor= int(input("ingrese el valor del producto"))
+def funcion (valor, cantidad):
+    total=cantidad*valor
+    return total
+
+subtotal=0
+while cantidad !=0:
+    cantidad = int(input("ingrese la cantidad de producto"))
+    valor= int(input("ingrese el valor del producto"))
+    calculo=funcion(valor, cantidad)
+    subtotal=subtotal+calculo
+
+print(f"el total a pagar es{subtotal}")
+            
