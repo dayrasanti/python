@@ -1,15 +1,53 @@
-cantidad = int(input("ingrese la cantidad de producto"))
-valor= int(input("ingrese el valor del producto"))
-def funcion (valor, cantidad):
-    total=cantidad*valor
-    return total
+# cantidad = int(input("ingrese la cantidad de producto"))
+# valor= int(input("ingrese el valor del producto"))
+# def funcion (valor, cantidad):
+#     total=cantidad*valor
+#     return total
 
-subtotal=0
-while cantidad !=0:
-    cantidad = int(input("ingrese la cantidad de producto"))
-    valor= int(input("ingrese el valor del producto"))
-    calculo=funcion(valor, cantidad)
-    subtotal=subtotal+calculo
+# subtotal=0
+# while cantidad !=0:
+#     cantidad = int(input("ingrese la cantidad de producto"))
+#     valor= int(input("ingrese el valor del producto"))
+#     calculo=funcion(valor, cantidad)
+#     subtotal=subtotal+calculo
 
-print(f"el total a pagar es{subtotal}")
-            
+# print(f"el total a pagar es{subtotal}")
+clientes = []
+def agregarclientes():
+    nombre=input("Nombre ")
+    apellido=input("Apellido ")
+    edad=input("Edad ")
+    telefono=input("Telefono ")
+    cliente =[nombre,
+             apellido,
+             edad,
+             telefono]
+    clientes.append(cliente)
+    print("cliente agregado")
+
+def menu():
+    while True:           
+        print("Banco")
+        print("ingrese 1 para agregar clientes")
+        print("ingrese 2 para ver clientes")
+        print("ingrese 3 para borrar clientes")
+        print("ingrese 4 para editar clientes")
+        opcion= int(input("ingresa la opcion"))
+        if opcion == 1:
+            print("elegio la opcion 1")
+            agregarclientes()
+        elif opcion == 2:
+            print("elegio la opcion 2")
+            rango = len(clientes)
+            for i in range(rango):
+                print(clientes[i])
+        elif opcion == 3:
+            print("elegio la opcion 3")
+        elif opcion == 4:
+            print("elegio la opcion 4")
+        else:
+            print("opcion invalida")
+
+
+
+menu()
