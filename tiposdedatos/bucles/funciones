@@ -25,6 +25,43 @@ def agregarclientes():
     clientes.append(cliente)
     print("cliente agregado")
 
+def verclientes():
+    if not clientes:
+        print("No hay clientes registrados.")
+        return
+    for idx, cliente in enumerate(clientes, start=1):
+        print(f"{idx}. Nombre: {cliente[0]}, Apellido: {cliente[1]}, Edad: {cliente[2]}, Teléfono: {cliente[3]}")
+
+def borrarclientes():
+    verclientes()
+    try:
+        indice = int(input("Ingresa el número del cliente a borrar: ")) - 1
+        if 0 <= indice < len(clientes):
+            clientes.pop(indice)
+            print("Cliente borrado con éxito.")
+        else:
+            print("Número de cliente inválido.")
+    except ValueError:
+        print("Por favor, ingresa un número válido.")
+
+def editarclientes():
+    verclientes()
+    try:
+        indice = int(input("Ingresa el número del cliente a editar: ")) - 1
+        if 0 <= indice < len(clientes):
+            cliente = clientes[indice]
+            print("Deja en blanco para mantener el dato actual.")
+            cliente[0] = input(f"Nombre [{cliente[0]}]: ") or cliente[0]
+            cliente[1] = input(f"Apellido [{cliente[1]}]: ") or cliente[1]
+            cliente[2] = input(f"Edad [{cliente[2]}]: ") or cliente[2]
+            cliente[3] = input(f"Teléfono [{cliente[3]}]: ") or cliente[3]
+            print("Cliente editado con éxito.")
+        else:
+            print("Número de cliente inválido.")
+    except ValueError:
+        print("Por favor, ingresa un número válido.")
+
+
 def menu():
     while True:           
         print("Banco")
@@ -33,18 +70,14 @@ def menu():
         print("ingrese 3 para borrar clientes")
         print("ingrese 4 para editar clientes")
         opcion= int(input("ingresa la opcion"))
-        if opcion == 1:
-            print("elegio la opcion 1")
+        if opcion == '1':
             agregarclientes()
-        elif opcion == 2:
-            print("elegio la opcion 2")
-            rango = len(clientes)
-            for i in range(rango):
-                print(clientes[i])
-        elif opcion == 3:
-            print("elegio la opcion 3")
-        elif opcion == 4:
-            print("elegio la opcion 4")
+        elif opcion == '2':
+            verclientes()
+        elif opcion == '3':
+            borrarclientes()
+        elif opcion == '4':
+            editarclientes()
         else:
             print("opcion invalida")
 
