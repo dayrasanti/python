@@ -19,11 +19,18 @@ import numpy as np
 # print(resultado4)
 
 # funciones estadisticas
-data = np.array([1, 3, 3, 6, 5])
+# data = np.array([1, 3, 3, 6, 5])
 
-# Calcular media
-media = np.median(data)
-print("media:",media)
-print("promedio:", np.mean(data))
-print("desviacion std:", np.std(data))
+# # Calcular media
+# media = np.median(data)
+# print("media:",media)
+# print("promedio:", np.mean(data))
+# print("desviacion std:", np.std(data))
+
+# manipulacion de arrays
+arr = np.array([[1, 2], [3, 4]])
+
+# Cambiar forma
+arr_reshape = arr.reshape(1, 4)
+print(arr_reshape)
 
