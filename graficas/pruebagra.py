@@ -1,5 +1,19 @@
 import matplotlib.pyplot as plt
 import pandas as pd
+df=pd.read_csv("poblacion.csv")
+x = df["Date"]
+y = df["COL"]
+z= df["AFG"]
+t= df["ARG"]
+
+plt.plot(x, y)
+plt.plot(x, z)
+plt.plot(x, t)
+plt.xlabel('Fecha')
+plt.ylabel('poblacion')
+
+plt.title('Gráfico con estilo personalizado')
+plt.show()
 # x = [1, 2, 3, 4]
 # y = [1, 4, 9, 16]
 
@@ -16,17 +30,3 @@ import pandas as pd
 # plt.ylabel('Valores')
 # plt.title('Gráfico de barras')
 # plt.show()
-df=pd.read_csv("poblacion.csv")
-x = df["Date"]
-y = df["COL"]
-z= df["AFG"]
-t= df["ARG"]
-
-plt.plot(x, y)
-plt.plot(x, z)
-plt.plot(x, t)
-plt.xlabel('Fecha')
-plt.ylabel('poblacion')
-
-plt.title('Gráfico con estilo personalizado')
-plt.show()
